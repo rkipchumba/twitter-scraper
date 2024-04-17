@@ -9,7 +9,7 @@ from ntscraper import Nitter
 from datetime import datetime
 from django.utils import timezone
 import random
-import time  # Import the time module to introduce a delay between retries
+import time  
 
 class Command(BaseCommand):
     help = 'Scrapes tweets from the Coindesk Twitter channel using Nitter and saves them to the database'
@@ -20,7 +20,6 @@ class Command(BaseCommand):
             'https://nitter.net',
             'https://nitter.pussthecat.org',
             'https://nitter.snopyta.org',
-            # Add more Nitter instances here
         ]
 
         # Initialize Nitter scraper
@@ -30,7 +29,7 @@ class Command(BaseCommand):
         random.shuffle(nitter_instances)
         for instance in nitter_instances:
             try:
-                tweets = scraper.get_tweets('mancity', mode='user', number=5, instance=instance)
+                tweets = scraper.get_tweets('coindesk', mode='user', number=5, instance=instance)
                 break  # Break the loop if tweets are successfully fetched from an instance
             except Exception as e:
                 print(f"Fetching tweets from {instance} failed: {e}")
