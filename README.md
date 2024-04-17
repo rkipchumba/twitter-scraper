@@ -1,6 +1,6 @@
 # Twitter Scraper App
 
-This Django app scrapes tweets from the Twitter channel "coindesk" using the Nitter API and saves them to a PostgreSQL database. It also sends an email notification if there are tweets with videos.
+This  app periodically fetches tweets from the Twitter user 'coindesk' using the Nitter API and saves them to a PostgreSQL database. It automatically saves images associated with the tweets to local storage. Additionally, it sends email notifications when a tweet contains a video. The app provides a GET API endpoint for accessing saved tweets with pagination support. Swagger documentation is also included, allowing users to test the GET API endpoints conveniently.
 
 ## Prerequisites
 
