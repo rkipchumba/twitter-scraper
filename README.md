@@ -38,8 +38,14 @@ pip install -r requirements.txt
  ```bash
  Replace the recipient email address in twitter_scraper.py
 
- run python manage.py twitter_scraper
+ python manage.py twitter_scraper 
  ```
+
+### After scraping the tweets, you can start the Django app by running
+```bash
+python manage.py runserver
+
+After scraping the tweets, you can access the Swagger documentation by default at http://localhost:8000/swagger/. This provides an interactive API documentation where you can explore and test the endpoints of the Django app
 
 
 
