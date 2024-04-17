@@ -44,6 +44,7 @@ pip install -r requirements.txt
 ### After scraping the tweets, you can start the Django app by running
 ```bash
 python manage.py runserver
+```
 
 After scraping the tweets, you can access the Swagger documentation by default at http://localhost:8000/swagger/. This provides an interactive API documentation where you can explore and test the endpoints of the Django app
 
