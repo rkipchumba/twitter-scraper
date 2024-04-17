@@ -17,7 +17,7 @@ Before running the app, make sure you have the following installed:
 
 ```bash
 git clone https://github.com/rkipchumba/twitter-scraper.git
-
+```
 cd core
 pip install -r requirements.txt
 
